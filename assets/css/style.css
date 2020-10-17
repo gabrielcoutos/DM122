@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+form {
+  padding: 20px;
+  border-bottom: solid 1px #8a2be2;
+}
+
+input {
+  width: 99%;
+  padding: 0.5em;
+  font-size: 1.4em;
+  border-color: #c05fff;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  padding: 20px;
+  border-bottom: solid 1px #8a2be2;
+  cursor: pointer;
+  display: flex;
+}
+
+li > span {
+  flex: 1;
+  text-align: left;
+  color: #FFF;
+}
+
+li > button {
+  background: none;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  color: #FFF;
+}
+
+.buy_list {
+  background-color: #c05fff;
+}
+
+.bought > span {
+  text-decoration: line-through;
+}
+
+.mdl-layout__header {
+  background-color: #8a2be2;
+}
