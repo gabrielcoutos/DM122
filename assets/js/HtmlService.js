@@ -50,7 +50,7 @@ export default class HtmlService {
 
     const price = parseFloat(itemPrice)
     this.total -= price
-    this.total.toFixed(2)
+    this.total = parseFloat(this.total.toFixed(2))
     total.textContent = "R$ " + this.total
 
     await this.listService.delete(itemId);
@@ -73,7 +73,7 @@ export default class HtmlService {
     const price = parseFloat(item.price)
 
     this.total += price
-    this.total.toFixed(2)
+    this.total = parseFloat(this.total.toFixed(2))
 
     total.textContent = "R$ " + this.total
 
