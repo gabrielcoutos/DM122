@@ -4,16 +4,33 @@
 
 form {
   padding: 20px;
-  border-bottom: solid 1px #8a2be2;
 }
 
 input {
-  width: 99%;
   padding: 0.5em;
   font-size: 1.4em;
   border-color: #c05fff;
 }
 
+.item-input{
+  float: left;
+  width: 60%;
+}
+
+.price-input{
+  width: 30%;
+}
+
+.price-input::before{
+  content: 'R$';
+}
+
+.button-submit{
+  padding: 0.5em;
+  font-size: 1.4em;
+  float: right;
+  width: 5%;
+}
 ul {
   margin: 0;
   padding: 0;
@@ -43,6 +60,12 @@ li > button {
 
 .buy_list {
   background-color: #c05fff;
+}
+
+.total {
+  color: #FFF;
+  font-size: 1em;
+
 }
 
 .bought > span {

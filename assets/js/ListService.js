@@ -11,17 +11,17 @@ export default class ListService {
   initializeDB() {
     db = new Dexie('listBuyDB');
 
-    db.version(2).stores({
-      items: '++id,description'
+    db.version(5).stores({
+      items: '++id,description,price'
     });
 
     db.on('populate', async () => {
       console.log('It runs only once!');
       await db.items.bulkPut([
-        { description: 'Banana', bought: true },
-        { description: 'Pizza', bought: false },
-        { description: 'Rice', bought: false },
-        { description: 'Bean', bought: true }
+        { description: 'Banana', price: '2.99', bought: true },
+        { description: 'Pizza', price: '10', bought: false },
+        { description: 'Rice',  price: '27.65', bought: false },
+        { description: 'Bean',  price: '7.89', bought: true }
       ]);
     });
   }
